@@ -55,7 +55,8 @@ $(document).ready(function () {
                         </a>
                     </div>
                     <div>
-                        <a class="btnClass" id="alterBtn" name="alterBtn" href=alterboard?quesBoard_num=${amount.seq}>
+                        <a class="btnClass" id="alterBtn" name="alterBtn" href="questionboard_alter.html">
+                        <!--<a class="btnClass" id="alterBtn" name="alterBtn" href=alterboard?quesBoard_num=${amount.seq}>-->
                             질문 수정
                         </a>
                         <a class="btnClass" id="delBtn" name="delBtn";">

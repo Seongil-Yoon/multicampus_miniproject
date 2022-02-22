@@ -1,92 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="user-scalable=no, width=device-width, initial-scale=1"
-    />
-    <title>질문 게시판</title>
 
-    <link rel="stylesheet" href="css/index.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
+  <title>질문 게시판</title>
 
-    <!-- Jquery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/index.css" />
 
-    <style>
-      body {
-        background-color: #ffffff;
-      }
-      section {
-        text-align: center;
-      }
-      h3 {
-        display: inline-block;
-        margin-right: 20px;
-      }
-      #title {
-        width: 500px;
-        height: 30px;
-        overflow: scroll;
-      }
-      #contents {
-        width: 500px;
-        height: 300px;
-        vertical-align: top;
-        resize: none;
-      }
-      #button_div {
-        margin: 20px auto;
-      }
-      #input:hover {
-        background-color: gray;
-      }
-      input[type="submit"] {
-        padding: 10px 20px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        border: 1px solid gray;
-      }
-    </style>
+  <!-- Jquery -->
+  <script src="js/jquery-3.6.0.min.js"></script>
 
-    <script>
-      $(document).ready(function () {
-        $("#wrap").on("submit", function (e) {
-          alert("게시물이 등록되었습니다.");
-        });
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+
+    section {
+      text-align: center;
+    }
+
+    h3 {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    #title {
+      width: 500px;
+      height: 30px;
+      overflow: scroll;
+    }
+
+    #contents {
+      width: 500px;
+      height: 300px;
+      vertical-align: top;
+      resize: none;
+    }
+
+    #button_div {
+      margin: 20px auto;
+    }
+
+    #input:hover {
+      background-color: gray;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      border: 1px solid gray;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+      $("#wrap").on("submit", function (e) {
+        alert("게시물이 등록되었습니다.");
       });
-    </script>
-  </head>
+    });
+  </script>
+</head>
 
-  <body>
-    <!-- 헤더 import -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#includeHead").load("./header.html"); // 원하는 파일 경로를 삽입하면 된다
-      });
-    </script>
-    <div id="includeHead"></div>
-    <!-- end of 헤더 import -->
+<body>
+  <!-- 헤더 import -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#includeHead").load("./header.html"); // 원하는 파일 경로를 삽입하면 된다
+    });
+  </script>
+  <div id="includeHead"></div>
+  <!-- end of 헤더 import -->
 
-    <section>
-      <div id="header">
-        <h2>질문 작성</h2>
+  <section>
+    <div id="header">
+      <h2>질문 작성</h2>
+    </div>
+
+    <form id="wrap" action="qustionboard.html">
+      <div id="title_div">
+        <h3>제목</h3>
+        <input type="text" id="title" name="title" required /><br />
       </div>
+      <div id="contents_div">
+        <h3>내용</h3>
+        <textarea id="contents" name="contents" required></textarea><br />
+      </div>
+      <div id="button_div">
+        <input type="submit" id="input" value="등록" />
+      </div>
+    </form>
+  </section>
+  <footer></footer>
+</body>
 
-      <form id="wrap" action="questionboard.html">
-        <div id="title_div">
-          <h3>제목</h3>
-          <input type="text" id="title" name="title" required /><br />
-        </div>
-        <div id="contents_div">
-          <h3>내용</h3>
-          <textarea id="contents" name="contents" required></textarea><br />
-        </div>
-        <div id="button_div">
-          <input type="submit" id="input" value="등록" />
-        </div>
-      </form>
-    </section>
-    <footer></footer>
-  </body>
 </html>
