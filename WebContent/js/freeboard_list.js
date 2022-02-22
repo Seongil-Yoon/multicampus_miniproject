@@ -45,7 +45,7 @@ $(document).ready(function () {
             html += `
                 <li class="boardLine" value="${amount.seq}">
                     <div>
-                        <a class="contents" id="boardInfo" name="boardInfo" href=board?freeBoard_num=${amount.seq}>
+                        <a class="contents" id="boardInfo" name="boardInfo" href="free_view.html">
                             <span>${amount.seq}</span>
                             <span>${amount.title}</span>
                             <span>${amount.contents}</span>
