@@ -9,11 +9,12 @@ ul.boardList li.boardHead {
     text-decoration: none;
     width: 100%;
     height: 60px;
-    background-color: aqua;
+    background-color: rgba(226, 224, 224, 0.424);
     margin-bottom: 10px;
     justify-content: space-around;
     text-align: center;
 }
+/* border-bottom: 1px solid #ccc */
 
 ul.boardList li:first-child {
     height: 30px;
@@ -24,7 +25,7 @@ ul.boardList li:first-child>span {
 }
 
 ul.boardList li.boardLine {
-    background-color: bisque;
+    background-color: cornsilk;
     width: 100%;
     height: 60px;
     margin-bottom: 10px;
@@ -32,7 +33,7 @@ ul.boardList li.boardLine {
 
 ul.boardList li.boardLine>div:nth-child(1) {
     float: left;
-    background-color: bisque;
+    background-color: cornsilk;
     width: 85%;
     height: inherit;
 }
