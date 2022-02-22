@@ -1,0 +1,47 @@
+section.boardSection{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+ul.boardList li.boardHead {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    height: 60px;
+    background-color: aqua;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+ul.boardList li:first-child {
+    height: 30px;
+}
+
+ul.boardList li:first-child>span {
+    line-height: 30px;
+}
+
+ul.boardList li.boardLine a {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    height: 60px;
+    background-color: aqua;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+ul.boardList li>a>span {
+    line-height: 60px;
+}
+
+li button.boardLineBtn{
+    
+}

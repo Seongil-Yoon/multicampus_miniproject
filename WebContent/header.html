@@ -1,0 +1,103 @@
+<!-- CSS -->
+<link rel="stylesheet" href="css/header.css" />
+
+<!-- JAVASCRIPT -->
+<script src="js/chatbot.js"></script>
+
+<!-- MATERIAL ICONS-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet" />
+
+
+
+<header>
+  <!-- 헤더 -->
+  <div id="header">
+    <h1 id="logo_font">
+      <a href="./main.html"><img src="images/multicampus_logo.png" alt="멀티캠퍼스 커뮤니티" id="logoimg" />
+        .COMMUNITY</a>
+    </h1>
+    <div id="login">
+      <ul>
+        <li><a href="./login.html">로그인</a></li>
+        <li><a href="./mypage.html">마이페이지</a></li>
+        <li><a href="./register.html">회원가입</a></li>
+      </ul>
+    </div>
+    <!-- 헤더 메뉴 -->
+    <div id="menu">
+      <ul>
+        <li id="freeboard"><a href="./freeboard.html">자유게시판</a></li>
+        <li id="qboard"><a href="./qustionboard.html">질문게시판</a></li>
+        <li id=""><a href="./chatroom.html">채팅방</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- header -->
+<script>
+  $(document).ready(function () {
+    $("#logoimg").css({
+      width: "250px",
+    });
+
+    $("#logo_font").css({
+      fontSize: "30px",
+      fontFamily: "'Architects Daughter', cursive",
+      color: "rgb(230, 150, 80)",
+    });
+
+    $("#header").css({
+      width: "1140px",
+      height: "80px",
+      margin: "0 auto",
+    });
+
+    $("#header h1").css({
+      float: "left",
+      paddingTop: "28px",
+    });
+
+    $("#header #login").css({
+      float: "right",
+    });
+
+    $("#header #login li").css({
+      float: "left",
+      marginTop: "10px",
+      marginLeft: "40px",
+      lineHeight: "80px",
+      fontSize: "20px",
+    });
+
+    $("#menu").css({
+      width: "1140px",
+      height: "90px",
+      margin: "0 auto",
+      float: "right",
+      borderTop: "0.5px solid gray",
+      borderBottom: "0.5px solid gray",
+    });
+
+    $("#menu li").css({
+      float: "left",
+      marginLeft: "40px",
+      lineHeight: "90px",
+      fontSize: "20px",
+    });
+
+    $("#freeboard, #qboard").css({
+      fontSize: "20px",
+    });
+
+    $("#boardWrite").css({
+      float: "right",
+      marginRight: "40px",
+    })
+  });
+</script>
+<!-- end of header -->

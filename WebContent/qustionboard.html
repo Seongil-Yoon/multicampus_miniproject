@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
+  <title>질문 게시판</title>
+
+  <link rel="stylesheet" href="./css/qustionboard_list.css">
+
+  <!-- Jquery -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <!-- 헤더 import -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#includeHead").load("./header.html", function () {
+        // load메소드로 페이지를 불러오고 DOM을 조작할려면 콜백함수 사용 
+        let html = `
+        <li id="boardWrite">
+            <a href="./boardWrite.html">글 작성</a>
+        </li>`;
+
+        $("#menu ul").append(html);
+
+      }); // 원하는 파일 경로를 삽입하면 된다
+
+    });
+  </script>
+  <div id="includeHead"></div>
+  <!-- end of 헤더 import -->
+
+  <section class="boardSection">
+    <ul class="boardList">
+      <li class="boardHead">
+        <span>번호</span>
+        <span>제목</span>
+        <span>내용</span>
+        <span>작성자</span>
+        <span>작성일</span>
+        <span>조회수</span>
+      </li>
+      <!-- JS 영역 -->
+    </ul>
+  </section>
+  <footer>
+
+  </footer>
+
+  <script type="text/javascript" src="./js/qustionboard_list.js"></script>
+</body>
+
+</html>
