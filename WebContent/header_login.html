@@ -7,14 +7,14 @@
   <title>질문게시판</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/header.css" />
+
+  <!-- JAVASCRIPT -->
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
   <!-- Jquery -->
   <script src="js/jquery-3.6.0.min.js"></script>
 </head>
-
-<!-- CSS -->
-<link rel="stylesheet" href="css/header.css" />
 
 <!-- MATERIAL ICONS-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -93,7 +93,12 @@
       </h1>
       <div id="login">
         <ul>
-          <li><a href="./main.html">로그아웃</a></li>
+          <li>
+            <a href="javascript:kakaoLogout();">로그아웃</a>
+
+            <!-- KAKAO LOGOUT JAVASCRIPT -->
+            <script src="js/kakaologout.js"></script>
+          </li>
           <li><a href="./mypage.html">마이페이지</a></li>
           <li><a href="./register.html">회원가입</a></li>
         </ul>

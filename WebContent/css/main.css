@@ -1,8 +1,9 @@
-.section1 {
+.section {
   text-align: center;
 }
 
-.section1_img {
+.section_img img {
+  width: 100%;
   margin: 5px 0 5px 0;
   padding: 0;
 }

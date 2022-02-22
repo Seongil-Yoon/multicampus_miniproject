@@ -10,10 +10,6 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/chatroom.css" />
-
-    <!-- JAVASCRIPT -->
-    <script src="js/chatroom.js"></script>
-
     <!-- Jquery -->
     <script src="js/jquery-3.6.0.min.js"></script>
   </head>
@@ -29,32 +25,38 @@
     <!-- end of 헤더 import -->
 
     <section>
-      <div class="chat_wrap">
-        <div class="header">채팅방</div>
-        <div class="chat">
-          <ul>
-            <!-- 동적 생성 -->
-          </ul>
-        </div>
-        <div class="input-div">
-          <textarea placeholder="여기에 메세지를 입력하세요."></textarea>
-        </div>
+      <div class="chatform">
+        <div class="chat_wrap">
+          <div class="header">채팅방</div>
+          <div class="chat">
+            <ul>
+              <!-- 동적 생성 -->
+            </ul>
+          </div>
+          <div class="input-div">
+            <textarea placeholder="여기에 메세지를 작성하세요."></textarea>
+          </div>
 
-        <!-- format -->
-        <div class="chat format">
-          <ul>
-            <li>
-              <div class="sender">
-                <span></span>
-              </div>
-              <div class="message">
-                <span></span>
-              </div>
-            </li>
-          </ul>
+          <!-- format -->
+          <div class="chat format">
+            <ul>
+              <li>
+                <div class="sender">
+                  <span></span>
+                </div>
+                <div class="message">
+                  <span></span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/chatroom.js"></script>
+
     <footer></footer>
   </body>
 </html>

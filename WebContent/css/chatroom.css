@@ -9,18 +9,18 @@
   background: #f18c7e;
   color: white;
   text-align: center;
+  width: 50%;
 }
 
 .chat_wrap .chat {
   padding-bottom: 80px;
 }
-
 .chat_wrap .chat ul {
-  width: 100%;
+  /* width: 100%; */
   list-style: none;
 }
 .chat_wrap .chat ul li {
-  width: 100%;
+  /* width: 100%; */
 }
 .chat_wrap .chat ul li.left {
   text-align: left;
@@ -49,10 +49,15 @@
   text-align: left;
 }
 
+.chat {
+  width: 50%;
+}
+
 .chat_wrap .input-div {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 50%;
+  height: 0;
   background-color: #fff;
   text-align: center;
   border-top: 1px solid #f18c7e;
@@ -66,4 +71,13 @@
 
 .format {
   display: none;
+}
+
+.chatform {
+  position: absolute;
+  top: 55%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 70%;
 }

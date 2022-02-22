@@ -1,5 +1,5 @@
 const Chat = (function () {
-  const myName = "blue";
+  const myName = "사용자";
 
   // init 함수
   function init() {
@@ -44,7 +44,7 @@ const Chat = (function () {
   function sendMessage(message) {
     // 서버에 전송하는 코드로 후에 대체
     const data = {
-      senderName: "blue",
+      senderName: "사용자",
       message: message,
     };
 
