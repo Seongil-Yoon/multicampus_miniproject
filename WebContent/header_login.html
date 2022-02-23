@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/angleup.css" />
+  <link rel="stylesheet" href="css/sweetalert.min.css" />
 
   <!-- JAVASCRIPT -->
   <script src="js/chatbot.js"></script>
@@ -21,7 +22,6 @@
 
 <!-- MATERIAL ICONS-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-
 <!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -110,7 +110,9 @@
       <div id="headerlogin">
         <ul>
           <li>
-            <a href="javascript:kakaoLogout();">로그아웃</a>
+            <a href="javascript:kakaoLogout();">
+              <input type="button" value="로그아웃" id="logout">
+            </a>
 
             <!-- KAKAO LOGOUT JAVASCRIPT -->
             <script src="js/kakaologout.js"></script>

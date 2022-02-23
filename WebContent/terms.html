@@ -7,9 +7,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/terms.css" />
     <link rel="stylesheet" href="css/angleup.css" />
+    <link rel="stylesheet" href="css/sweetalert.min.css" />
     
     <!-- JAVASCRIPT -->
     <script src="js/chatbot.js"></script>
+    <script src="js/sweetalert.min.js"></script>
     
     <!-- JQUERY -->
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -207,12 +209,12 @@
           e.preventDefault();
 
           if (!form1_data["c1"]) {
-            alert("이용동의 약관에 동의하지 않았습니다.");
+            swal("이용동의 약관에 동의하지 않았습니다.", "", "warning");
             return false;
           }
 
           if (!form1_data["c2"]) {
-            alert("개인정보 수집 및 이용에 대한 안내를 동의하지 않았습니다.");
+            swal("개인정보 수집 및 이용에 대한 안내를 동의하지 않았습니다.", "", "warning");
             return false;
           }
 

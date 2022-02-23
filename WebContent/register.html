@@ -1,205 +1,197 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="user-scalable=no, width=device-width, initial-scale=1"
-    />
-    <title>회원 가입</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/angleup.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
+  <title>회원 가입</title>
 
-    <!-- Jquery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/userlist.js"></script>
-    
-    <style>
-      .section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        transform: translateY(30%);
-      }
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/angleup.css" />
+  <link rel="stylesheet" href="css/sweetalert.min.css" />
 
-      .section h2 {
-        margin-bottom: 30px;
-      }
+  <!-- JAVASCRIPT -->
+  <script src="js/userlist.js"></script>
+  <script src="js/sweetalert.min.js"></script>
 
-      div.create {
-        width: 800px;
-        text-align: center;
-        padding: 30px;
-        border-bottom: 1px solid black;
-        margin: auto;
-      }
+  <!-- Jquery -->
+  <script src="js/jquery-3.6.0.min.js"></script>
 
-      table {
-        height: 300px;
-        width: 900px;
-        border-top: 3px solid black;
-        margin-right: auto;
-        margin-left: auto;
-      }
+  <style>
+    .section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      transform: translateY(30%);
+    }
 
-      td {
-        border-bottom: 1px dotted black;
-      }
+    .section h2 {
+      margin-bottom: 30px;
+    }
 
-      .but1 {
-        background-color: rgb(230, 150, 80);
-        border-color: rgb(230, 150, 80);
-        width: 80px;
-        height: 30px;
-        margin-left: 10px;
-      }
+    div.create {
+      width: 800px;
+      text-align: center;
+      padding: 30px;
+      border-bottom: 1px solid black;
+      margin: auto;
+    }
 
-      .col1 {
-        background-color: #e8e8e8;
-        padding: 10px;
-        text-align: right;
-        font-weight: bold;
-        font-size: 16px;
-      }
+    table {
+      height: 300px;
+      width: 900px;
+      border-top: 3px solid black;
+      margin-right: auto;
+      margin-left: auto;
+    }
 
-      .col2 {
-        text-align: left;
-        padding: 5px;
-      }
+    td {
+      border-bottom: 1px dotted black;
+    }
 
-      .col2input {
-        width: 200px;
-        height: 30px;
-        border: 1px solid black;
-      }
+    .but1 {
+      background-color: rgb(230, 150, 80);
+      border-color: rgb(230, 150, 80);
+      width: 80px;
+      height: 30px;
+      margin-left: 10px;
+    }
 
-      .but3, .but4 {
-        background-color: rgb(230, 150, 80);
-        border-color: rgb(230, 150, 80);
-        width: 80px;
-        height: 30px;
-      }
-    </style>
-  </head>
+    .col1 {
+      background-color: #e8e8e8;
+      padding: 10px;
+      text-align: right;
+      font-weight: bold;
+      font-size: 16px;
+    }
 
-  <body>
-    <!-- 헤더 import -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#includeHead").load("./header.html"); // 원하는 파일 경로를 삽입하면 된다
+    .col2 {
+      text-align: left;
+      padding: 5px;
+    }
 
-        $("#confirm").click(function () {
-          if ($("#userName").val() == "") {
-            alert("이름을 입력해주세요.");
-            $("#userName").focus();
-            return false;
-          }
-          if ($("#userId").val() == "") {
-            alert("아이디를 입력해주세요.");
-            $("#userId").focus();
-            return false;
-          }
-          if ($("#userPwd").val() == "") {
-            alert("암호를 입력해주세요.");
-            $("#userPwd").focus();
-            return false;
-          }
-          //pw확인
-          var userPwd = $("#userPwd").val();
-          var userPwdConfirm = $("#userPwdConfirm").val();
+    .col2input {
+      width: 200px;
+      height: 30px;
+      border: 1px solid black;
+    }
 
-          if (userPwd != userPwdConfirm) {
-            alert("암호와 암호확인이  일치하지않습니다.");
-            $("#userPwdConfirm").focus();
-            return false;
-          }
-          alert("회원가입이 완료되었습니다.");
-          userlist.push($("#userId").val());
-          location.href = "./login.html";
-        });
+    .but3,
+    .but4 {
+      background-color: rgb(230, 150, 80);
+      border-color: rgb(230, 150, 80);
+      width: 80px;
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 헤더 import -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#includeHead").load("./header.html"); // 원하는 파일 경로를 삽입하면 된다
+
+      $("#confirm").click(function () {
+        if ($("#userName").val() == "") {
+          swal("이름을 입력해주세요.", "", "error");
+          $("#userName").focus();
+          return false;
+        }
+        if ($("#userId").val() == "") {
+          swal("아이디를 입력해주세요.", "", "error");
+          $("#userId").focus();
+          return false;
+        }
+        if ($("#userPwd").val() == "") {
+          swal("암호를 입력해주세요.", "", "error");
+          $("#userPwd").focus();
+          return false;
+        }
+        //pw확인
+        var userPwd = $("#userPwd").val();
+        var userPwdConfirm = $("#userPwdConfirm").val();
+
+        if (userPwd != userPwdConfirm) {
+          swal("암호가 일치하지 않습니다.", "", "error");
+          $("#userPwdConfirm").focus();
+          return false;
+        }
+        swal("회원가입이 완료되었습니다.", "", "success");
+        userlist.push($("#userId").val());
+        location.href = "./login.html";
       });
+    });
 
-      function idCheck() {
-        //아이디 유효성 검사
-        var idReg = /^[a-zA-Z]+[a-z0-9A-Z]{3,19}$/g;
-        var idCk = false;
+    function idCheck() {
+      //아이디 유효성 검사
+      var idReg = /^[a-zA-Z]+[a-z0-9A-Z]{3,19}$/g;
+      var idCk = false;
 
-        if (!idReg.test($("#userId").val())) {
-          alert("영문과 숫자 4~12자 이내로 입력하세요.");
-          return;
-        }
+      if (!idReg.test($("#userId").val())) {
+        swal("영문과 숫자 4~12자 이내로 입력하세요.", "", "warning");
+        return;
+      }
 
-        for (var i = 0; i <= userlist.length; i++) {
-          if (userlist[i] == $("#userId").val()) {
-            idCk = true;
-          }
-        }
-        if (idCk) {
-          alert("등록이 불가능한 아이디입니다.");
-        } else {
-          alert("등록 가능한 아이디입니다.");
+      for (var i = 0; i <= userlist.length; i++) {
+        if (userlist[i] == $("#userId").val()) {
+          idCk = true;
         }
       }
-    </script>
-    <div id="includeHead"></div>
-    <!-- end of 헤더 import -->
+      if (idCk) {
+        swal("등록이 불가능한 아이디입니다.", "", "error");
+      } else {
+        swal("등록 가능한 아이디입니다.", "", "success");
+      }
+    }
+  </script>
+  <div id="includeHead"></div>
+  <!-- end of 헤더 import -->
 
-    <section class="section">
-      <table>
-        <caption>
-          <h2>회원가입 양식</h2>
-        </caption>
-        <tr>
-          <td class="col1">이름</td>
-          <td class="col2">
-            <input type="text" name="userName" id="userName" maxlength="5" class="col2input" />
-          </td>
-        </tr>
-        <tr>
-          <td class="col1">아이디</td>
-          <td class="col2">
-            <input type="text" name="userId" id="userId" maxlength="14" class="col2input" />
-            <input
-              class="but1"
-              type="button"
-              value="중복확인"
-              id="btn-idcheck"
-              onclick="idCheck()"
-            />
-          </td>
-        </tr>
-        <tr>
-          <td class="col1">비밀번호</td>
-          <td class="col2">
-            <input type="password" name="userPwd" id="userPwd" maxlength="16" class="col2input" />
-          </td>
-        </tr>
-        <tr>
-          <td class="col1">비밀번호 확인</td>
-          <td class="col2">
-            <input
-              type="password"
-              name="userPwd"
-              id="userPwdConfirm"
-              maxlength="16"
-              class="col2input"
-            />
-          </td>
-        </tr>
-      </table>
-      <div class="create">
-        <input class="but3" type="button" value="회원가입" id="confirm" />
-        <input class="but4" type="reset" value="초기화" />
-      </div>
-    </section>
-    <footer>
-      <div class="angleup">
-        <a href="#" title=”맨위로">
-          <img src="images/angleup.png" alt="맨위로">
-        </a>
-      </div>
-    </footer>
-  </body>
+  <section class="section">
+    <table>
+      <caption>
+        <h2>회원가입 양식</h2>
+      </caption>
+      <tr>
+        <td class="col1">이름</td>
+        <td class="col2">
+          <input type="text" name="userName" id="userName" maxlength="5" class="col2input" />
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">아이디</td>
+        <td class="col2">
+          <input type="text" name="userId" id="userId" maxlength="14" class="col2input" />
+          <input class="but1" type="button" value="중복확인" id="btn-idcheck" onclick="idCheck()" />
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">비밀번호</td>
+        <td class="col2">
+          <input type="password" name="userPwd" id="userPwd" maxlength="16" class="col2input" />
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">비밀번호 확인</td>
+        <td class="col2">
+          <input type="password" name="userPwd" id="userPwdConfirm" maxlength="16" class="col2input" />
+        </td>
+      </tr>
+    </table>
+    <div class="create">
+      <input class="but3" type="button" value="회원가입" id="confirm" />
+      <input class="but4" type="reset" value="초기화" />
+    </div>
+  </section>
+  <footer>
+    <div class="angleup">
+      <a href="#" title=”맨위로">
+        <img src="images/angleup.png" alt="맨위로">
+      </a>
+    </div>
+  </footer>
+</body>
+
 </html>
