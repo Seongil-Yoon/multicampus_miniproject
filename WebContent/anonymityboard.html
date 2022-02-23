@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
-  <title>질문 게시판</title>
+  <title>자유 게시판</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/qustionboard_list.css">
+  <link rel="stylesheet" href="./css/freeboard_list.css">
   <link rel="stylesheet" href="css/angleup.css" />
 
   <!-- Jquery -->
@@ -23,12 +23,12 @@
         // load메소드로 페이지를 불러오고 DOM을 조작할려면 콜백함수 사용 
         let html = `
         <li id="boardWrite">
-            <a href="./questionboard_input.html">질문 작성</a>
+            <a href="./freeboard_input.html">글 작성</a>
         </li>`;
 
         $("#menu ul").append(html);
 
-      });
+      }); // 원하는 파일 경로를 삽입하면 된다
 
     });
   </script>
@@ -37,7 +37,7 @@
 
   <section class="boardSection">
     <ul class="boardList">
-      <li class="boardHead">
+      <li class="boardHead" >
         <span>번호</span>
         <span>제목</span>
         <span>내용</span>
@@ -58,7 +58,7 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="./js/qustionboard_list.js"></script>
+  <script type="text/javascript" src="./js/anonymityboard_list.js"></script>
 </body>
 
 </html>

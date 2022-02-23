@@ -8,7 +8,8 @@
     />
     <title>자유 게시판</title>
 
-    <link rel="stylesheet" href="css/index.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/angleup.css" />
 
     <!-- Jquery -->
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -20,18 +21,26 @@
       section {
         text-align: center;
       }
+      .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        transform: translateY(10%);
+      }
       h3 {
         display: inline-block;
         margin-right: 20px;
       }
       #title {
-        width: 500px;
+        width: 960px;
         height: 30px;
         overflow: scroll;
+        margin-bottom: 10px;
       }
       #contents {
-        width: 500px;
-        height: 300px;
+        width: 960px;
+        height: 500px;
         vertical-align: top;
         resize: none;
       }
@@ -42,10 +51,10 @@
         background-color: gray;
       }
       input[type="submit"] {
-        padding: 10px 20px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        border: 1px solid gray;
+        background-color: rgb(230, 150, 80);
+        border-color: rgb(230, 150, 80);
+        width: 80px;
+        height: 40px;
       }
     </style>
 
@@ -68,7 +77,7 @@
     <div id="includeHead"></div>
     <!-- end of 헤더 import -->
 
-    <section>
+    <section class="section">
       <div id="header">
         <h2>게시물 작성</h2>
       </div>
@@ -87,6 +96,12 @@
         </div>
       </form>
     </section>
-    <footer></footer>
+    <footer>
+      <div class="angleup">
+        <a href="#" title=”맨위로">
+          <img src="images/angleup.png" alt="맨위로">
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

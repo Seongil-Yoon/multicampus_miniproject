@@ -6,12 +6,26 @@
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
   <title>회원 가입</title>
 
-  <!-- <link rel="stylesheet" href="css/index.css"> -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/angleup.css" />
 
   <!-- Jquery -->
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/userlist.js"></script>
+
   <style>
+    .section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      transform: translateY(30%);
+    }
+
+    .section h2 {
+      margin-bottom: 30px;
+    }
+
     div.create {
       width: 800px;
       text-align: center;
@@ -32,17 +46,39 @@
       border-bottom: 1px dotted black;
     }
 
+    .but1 {
+      background-color: rgb(230, 150, 80);
+      border-color: rgb(230, 150, 80);
+      width: 80px;
+      height: 30px;
+      margin-left: 10px;
+    }
+
     .col1 {
       background-color: #e8e8e8;
       padding: 10px;
       text-align: right;
       font-weight: bold;
-      font-size: 0.8em;
+      font-size: 16px;
     }
 
     .col2 {
       text-align: left;
       padding: 5px;
+    }
+
+    .col2input {
+      width: 200px;
+      height: 30px;
+      border: 1px solid black;
+    }
+
+    .but3,
+    .but4 {
+      background-color: rgb(230, 150, 80);
+      border-color: rgb(230, 150, 80);
+      width: 80px;
+      height: 30px;
     }
   </style>
 </head>
@@ -51,12 +87,12 @@
   <!-- 헤더 import -->
   <script type="text/javascript">
     $(document).ready(function () {
-      $("#includeHead").load("./header.html");
+      $("#includeHead").load("./header.html"); // 원하는 파일 경로를 삽입하면 된다
     });
   </script>
   <div id="includeHead"></div>
   <!-- end of 헤더 import -->
-  
+
   <script type="text/javascript">
     $(document).ready(function () {
       $("#confirm").click(function () {
@@ -110,10 +146,10 @@
           alert("등록 가능한 아이디입니다.");
         }
       }
-    });
+    })
   </script>
 
-  <section>
+  <section class="section">
     <table>
       <caption>
         <h2>회원가입 양식</h2>
@@ -121,26 +157,26 @@
       <tr>
         <td class="col1">이름</td>
         <td class="col2">
-          <input type="text" name="userName" id="userName" maxlength="5" />
+          <input type="text" name="userName" id="userName" maxlength="5" class="col2input" />
         </td>
       </tr>
       <tr>
         <td class="col1">아이디</td>
         <td class="col2">
-          <input type="text" name="userId" id="userId" maxlength="14" />
+          <input type="text" name="userId" id="userId" maxlength="14" class="col2input" />
           <input class="but1" type="button" value="중복확인" id="btn-idcheck" onclick="idCheck()" />
         </td>
       </tr>
       <tr>
         <td class="col1">비밀번호</td>
         <td class="col2">
-          <input type="password" name="userPwd" id="userPwd" maxlength="16" />
+          <input type="password" name="userPwd" id="userPwd" maxlength="16" class="col2input" />
         </td>
       </tr>
       <tr>
         <td class="col1">비밀번호 확인</td>
         <td class="col2">
-          <input type="password" name="userPwd" id="userPwdConfirm" maxlength="16" />
+          <input type="password" name="userPwd" id="userPwdConfirm" maxlength="16" class="col2input" />
         </td>
       </tr>
     </table>
@@ -149,7 +185,13 @@
       <input class="but4" type="reset" value="초기화" />
     </div>
   </section>
-  <footer></footer>
+  <footer>
+    <div class="angleup">
+      <a href="#" title=”맨위로">
+        <img src="images/angleup.png" alt="맨위로">
+      </a>
+    </div>
+  </footer>
 </body>
 
 </html>

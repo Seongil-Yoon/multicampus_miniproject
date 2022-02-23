@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1"
+    />
+    <title>질문게시판</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
-  <title>질문게시판</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/angleup.css" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/header.css" />
+    <!-- JAVASCRIPT -->
+    <script src="js/chatbot.js"></script>
 
-  <!-- JAVASCRIPT -->
-  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <!-- Jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+  </head>
 
-  <!-- Jquery -->
-  <script src="js/jquery-3.6.0.min.js"></script>
-</head>
+  <!-- MATERIAL ICONS-->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
 
-<!-- MATERIAL ICONS-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+    rel="stylesheet"
+  />
 
-<!-- FONTS -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet" />
-
-<!-- header -->
-<script>
-  $(document).ready(function () {
+  <!-- header -->
+  <script>
+    $(document).ready(function () {
     $("#logoimg").css({
       width: "250px",
     });
@@ -37,10 +46,15 @@
       color: "rgb(230, 150, 80)",
     });
 
-    $("#header").css({
+
+    $("#header, #nav").css({
       width: "1140px",
       height: "80px",
       margin: "0 auto",
+    });
+
+    $("#nav").css({
+      display: "block",
     });
 
     $("#header h1").css({
@@ -48,11 +62,11 @@
       paddingTop: "28px",
     });
 
-    $("#header #login").css({
+    $("#header #headerlogin").css({
       float: "right",
     });
 
-    $("#header #login li").css({
+    $("#header #headerlogin li").css({
       float: "left",
       marginTop: "10px",
       marginLeft: "40px",
@@ -61,8 +75,9 @@
     });
 
     $("#menu").css({
+      display: "fixed",
       width: "1140px",
-      height: "90px",
+      height: "60px",
       margin: "0 auto",
       float: "right",
       borderTop: "0.5px solid gray",
@@ -72,50 +87,69 @@
     $("#menu li").css({
       float: "left",
       marginLeft: "40px",
-      lineHeight: "90px",
+      lineHeight: "60px",
       fontSize: "20px",
     });
 
     $("#freeboard, #qboard").css({
       fontSize: "20px",
     });
+    $("#boardWrite").css({
+      float : "right",
+    });
   });
 </script>
-<!-- end of header -->
+  <!-- end of header -->
 
-<body>
-  <header>
-    <!-- 헤더 -->
-    <div id="header">
-      <h1 id="logo_font">
-        <a href="./main.html"><img src="images/multicampus_logo.png" alt="멀티캠퍼스 커뮤니티" id="logoimg" />
-          .COMMUNITY</a>
-      </h1>
-      <div id="login">
-        <ul>
-          <li>
-            <a href="javascript:kakaoLogout();">로그아웃</a>
+  <body>
+    <header>
+      <!-- 헤더 -->
+      <div id="header">
+        <h1 id="logo_font">
+          <a href="./main.html"
+            ><img
+              src="images/multicampus_logo.png"
+              alt="멀티캠퍼스 커뮤니티"
+              id="logoimg"
+            />
+            .COMMUNITY</a
+          >
+        </h1>
+        <div id="headerlogin">
+          <ul>
+            <li>
+              <a href="javascript:kakaoLogout();">로그아웃</a>
 
-            <!-- KAKAO LOGOUT JAVASCRIPT -->
-            <script src="js/kakaologout.js"></script>
-          </li>
-          <li><a href="./mypage.html">마이페이지</a></li>
-          <li><a href="./register.html">회원가입</a></li>
-        </ul>
+              <!-- KAKAO LOGOUT JAVASCRIPT -->
+              <script src="js/kakaologout.js"></script>
+            </li>
+            <li><a href="./mypage.html">마이페이지</a></li>
+            <li><a href="./register.html">회원가입</a></li>
+          </ul>
+        </div>
       </div>
-      <!-- 헤더 메뉴 -->
-      <div id="menu">
-        <ul>
-          <li id="freeboard"><a href="./freeboard.html">자유게시판</a></li>
-          <li id="qboard"><a href="./qustionboard.html">질문게시판</a></li>
-          <li id=""><a href="./chatroom.html">채팅방</a></li>
-        </ul>
+      <nav>
+        <div id="nav">
+          <!-- 헤더 메뉴 -->
+          <div id="menu">
+            <ul>
+              <li id="freeboard"><a href="./freeboard.html">자유게시판</a></li>
+              <li id="qboard"><a href="./qustionboard.html">질문게시판</a></li>
+              <li id="qboard"><a href="./qustionboard.html">익명게시판</a></li>
+              <li id=""><a href="./chatroom.html">채팅방</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section></section>
+    <footer>
+      <div class="angleup">
+        <a href="#" title=”맨위로">
+          <img src="images/angleup.png" alt="맨위로">
+        </a>
       </div>
-    </div>
-  </header>
-
-  <section></section>
-  <footer></footer>
-</body>
-
+    </footer>
+  </body>
 </html>
