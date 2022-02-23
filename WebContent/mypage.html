@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/mypage.css" />
     <link rel="stylesheet" href="css/angleup.css" />
+    <link rel="stylesheet" href="css/sweetalert.min.css" />
 
     <!-- JAVASCRIPT -->
     <script src="js/chatbot.js"></script>
     <script src="js/mypage.js"></script>
+    <script src="js/sweetalert.min.js"></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 
     <!-- Jquery -->
@@ -50,7 +52,7 @@
           <div class="label">이메일</div>
           <input type="text" class="infobox" />
           <br />
-          <input type="button" value="회원정보 변경" class="infochange" id="infochange" onclick="display()" />
+          <input type="button" value="회원정보 변경" class="infochange" id="infochange" />
           <br /><br />
           <div class="label">현재 비밀번호</div>
           <input type="text" class="infobox" />
@@ -59,10 +61,10 @@
           <input type="text" class="infobox" /><br />
           <div class="label">비밀번호 확인</div>
           <input type="text" class="infobox" /><br />
-          <input type="button" value="비밀번호 변경" class="infochange" id="pwchange" onclick="display()" />
+          <input type="button" value="비밀번호 변경" class="infochange" id="pwchange" />
           <br /><br />
           <a href="javascript:secession();">
-            <input type="button" value="회원탈퇴" class="infochange" />
+            <input type="button" value="회원탈퇴" class="infochange" id="secession" />
           </a>
           <!-- KAKAO SECESSION JAVASCRIPT -->
           <script src="js/kakaosecession.js"></script>

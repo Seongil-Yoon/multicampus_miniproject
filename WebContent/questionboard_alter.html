@@ -21,17 +21,12 @@
     section {
       text-align: center;
     }
-
-    .section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      transform: translateY(20%);
-    }
-
-    #header {
-      border-bottom-color: gray;
+    .section{
+    	display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		transform: translateY(10%);
     }
 
     h3 {
@@ -40,14 +35,15 @@
     }
 
     #title {
-      width: 500px;
+      width: 960px;
       height: 30px;
       overflow: scroll;
+      margin-bottom: 10px;
     }
 
     #contents {
-      width: 500px;
-      height: 300px;
+      width: 960px;
+      height: 500px;
       vertical-align: top;
       resize: none;
     }
@@ -70,9 +66,9 @@
 
     input[type="submit"] {
       background-color: rgb(230, 150, 80);
-        border-color: rgb(230, 150, 80);
-        width: 80px;
-        height: 40px;
+      border-color: rgb(230, 150, 80);
+      width: 80px;
+      height: 40px;
     }
   </style>
 
@@ -103,7 +99,7 @@
   <div id="includeHead"></div>
   <!-- end of 헤더 import -->
 
-  <section class="section">
+  <section class='section'>
     <div id="header">
       <h2>질문 수정</h2>
     </div>

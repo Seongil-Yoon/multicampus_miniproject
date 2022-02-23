@@ -10,10 +10,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/angleup.css" />
+    <link rel="stylesheet" href="css/sweetalert.min.css" />
+
+    <!-- JAVASCRIPT -->
+    <script src="js/userlist.js"></script>
+    <script src="js/sweetalert.min.js"></script>
 
     <!-- Jquery -->
     <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/userlist.js"></script>
     
     <style>
       .section {
@@ -92,17 +96,17 @@
 
         $("#confirm").click(function () {
           if ($("#userName").val() == "") {
-            alert("이름을 입력해주세요.");
+            swal("이름을 입력해주세요.", "", "error");
             $("#userName").focus();
             return false;
           }
           if ($("#userId").val() == "") {
-            alert("아이디를 입력해주세요.");
+            swal("아이디를 입력해주세요.", "", "error");
             $("#userId").focus();
             return false;
           }
           if ($("#userPwd").val() == "") {
-            alert("암호를 입력해주세요.");
+            swal("암호를 입력해주세요.", "", "error");
             $("#userPwd").focus();
             return false;
           }
@@ -111,11 +115,11 @@
           var userPwdConfirm = $("#userPwdConfirm").val();
 
           if (userPwd != userPwdConfirm) {
-            alert("암호와 암호확인이  일치하지않습니다.");
+            swal("암호가 일치하지 않습니다.", "", "error");
             $("#userPwdConfirm").focus();
             return false;
           }
-          alert("회원가입이 완료되었습니다.");
+          swal("회원가입이 완료되었습니다.", "", "success");
           userlist.push($("#userId").val());
           location.href = "./login.html";
         });
@@ -127,7 +131,7 @@
         var idCk = false;
 
         if (!idReg.test($("#userId").val())) {
-          alert("영문과 숫자 8~12자 이내로 입력하세요.");
+          swal("영문과 숫자 4~12자 이내로 입력하세요.", "", "warning");
           return;
         }
 
@@ -137,9 +141,9 @@
           }
         }
         if (idCk) {
-          alert("등록이 불가능한 아이디입니다.");
+          swal("등록이 불가능한 아이디입니다.", "", "error");
         } else {
-          alert("등록 가능한 아이디입니다.");
+          swal("등록 가능한 아이디입니다.", "", "success");
         }
       }
     </script>

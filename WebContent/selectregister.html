@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>회원가입 약관동의</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/terms.css" />
+    <link rel="stylesheet" href="css/selectregister.css" />
+    <link rel="stylesheet" href="css/angleup.css" />
+    <link rel="stylesheet" href="css/sweetalert.min.css" />
+    
+    <!-- JAVASCRIPT -->
+    <script src="js/chatbot.js"></script>
+    <script src="js/selectregister.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    
+    <!-- JQUERY -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+    rel="stylesheet"
+    />
+
+    <!-- accordion 접히는 Script 선언 -->
+    <script>
+      $(function () {
+        $("#accordion").accordion();
+        $('#accordion input[type="checkbox"]').click(function (e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="logo">
+        <ul>
+          <li>
+            <a href="./main.html">
+              <img src="images/multicampus_logo.png" class="logoimg">
+            </a>
+          </li>
+          <li>
+            <a href="./main.html">
+              <h1 class="logofont">.COMMUNITY</h1>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="general">
+          <p>일반회원</p>
+          <a href="./register.html">
+            <input type="button" value="일반 회원가입" class="generalbtn">
+          </a>
+        </div>
+        <div class="sns">
+          <p>간편회원</p>
+          <div class="login_img">
+            <a href="javascript:kakaoLogin();">
+              <img src="images/kakaotalk_img.png" class="kakaobtn">
+            </a>
+            <!-- KAKAO LOGIN JAVASCRIPT -->
+            <script src="js/kakaologin.js"></script>
+          <img src="images/google_img.png" class="googlebtn" id="googlebtn" onclick="display()">
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="angleup">
+        <a href="#" title=”맨위로">
+          <img src="images/angleup.png" alt="맨위로">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
