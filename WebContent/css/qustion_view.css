@@ -1,13 +1,13 @@
 @charset "EUC-KR";
 
 table {
-    margin-left:auto; 
-    margin-right:auto;
-	width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1150px;
 }
 
-th, td {
+th,
+td {
   text-align: center;
-  border: 1px solid #949494
+  border: 1px solid #949494;
 }
-
