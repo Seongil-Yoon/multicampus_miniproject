@@ -1,0 +1,10 @@
+.angleup {
+  display: scroll;
+  position: fixed;
+  bottom: 100px;
+  right: 42px;
+}
+
+.angleup img {
+  width: 25px;
+}

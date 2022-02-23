@@ -32,7 +32,6 @@
       color: "rgb(230, 150, 80)",
     });
 
-
     $("#header, #nav").css({
       width: "1140px",
       height: "80px",
@@ -77,11 +76,12 @@
       fontSize: "20px",
     });
 
-    $("#freeboard, #qboard").css({
+    $("#freeboard, #qboard, #aboard").css({
       fontSize: "20px",
     });
+
     $("#boardWrite").css({
-      float : "right",
+      float: "right",
     });
   });
 </script>
@@ -104,20 +104,21 @@
       <ul>
         <li><a href="./login.html">로그인</a></li>
         <li><a href="./mypage.html">마이페이지</a></li>
-        <li><a href="./register.html">회원가입</a></li>
+        <li><a href="./terms.html">회원가입</a></li>
       </ul>
     </div>
   </div>
+  <nav>
+    <div id="nav">
+      <!-- 헤더 메뉴 -->
+      <div id="menu">
+        <ul>
+          <li id="freeboard"><a href="./freeboard.html">자유게시판</a></li>
+          <li id="qboard"><a href="./qustionboard.html">질문게시판</a></li>
+          <li id="aboard"><a href="./anonymityboard.html">익명게시판</a></li>
+          <li id=""><a href="./chatroom.html">채팅방</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </header>
-<nav>
-  <div id="nav">
-    <!-- 헤더 메뉴 -->
-    <div id="menu">
-      <ul>
-        <li id="freeboard"><a href="./freeboard.html">자유게시판</a></li>
-        <li id="qboard"><a href="./qustionboard.html">질문게시판</a></li>
-        <li id=""><a href="./chatroom.html">채팅방</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>

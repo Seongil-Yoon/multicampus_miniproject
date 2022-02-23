@@ -8,11 +8,14 @@
 
 <title>질문 게시판</title>
 
-<link rel="stylesheet" href="css/qustion_view.css" />
+<!-- CSS -->
+<link rel="stylesheet" href="css/angleup.css" />
 
 <!-- Jquery -->
 <script src="js/jquery-3.6.0.min.js"></script>
+
 </head>
+
 <body>
 	<!-- 헤더 import -->
 	<script type="text/javascript">
@@ -23,7 +26,7 @@
 	</script>
 	<div id="includeHead"></div>
 	<!-- end of 헤더 import -->
-
+	
 	<br>
 	<br>
 	<table style="text-align: center; border: 1px solid #dddddd">
@@ -72,11 +75,26 @@
 	<br>
 	<br>
 	<div style="text-align: center;">
-		<button style="display: inline-block;"
+		<button style="
+		display: inline-block;
+        background-color: rgb(230, 150, 80);
+        border-color: rgb(230, 150, 80);
+        width: 80px;
+        height: 40px;"
 			onclick="location.href='qustionboard.html' ">목록</button>
-		<button id="btn1" style="display: inline-block;"
+		<button id="btn1" style="
+        display: inline-block;
+        background-color: rgb(230, 150, 80);
+        border-color: rgb(230, 150, 80);
+        width: 80px;
+        height: 40px;"
 			onclick="location.href='questionboard_alter.html'">글 수정</button>
-		<button id="btn2" style="display: inline-block;"
+		<button id="btn2" style="
+        display: inline-block;
+        background-color: rgb(230, 150, 80);
+        border-color: rgb(230, 150, 80);
+        width: 80px;
+        height: 40px;"
 			onclick="location.href='qustionboard.html'">글 삭제</button>
 	</div>
 	<script>
@@ -87,4 +105,11 @@
 	}
 	</Script>
 </body>
+<footer>
+	<div class="angleup">
+        <a href="#" title=”맨위로">
+          <img src="images/angleup.png" alt="맨위로">
+        </a>
+      </div>
+</footer>
 </html>

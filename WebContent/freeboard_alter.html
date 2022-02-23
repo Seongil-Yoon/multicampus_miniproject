@@ -8,7 +8,8 @@
     />
     <title>자유 게시판</title>
 
-    <link rel="stylesheet" href="css/index.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/angleup.css" />
 
     <!-- Jquery -->
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -19,6 +20,13 @@
       }
       section {
         text-align: center;
+      }
+      .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        transform: translateY(20%);
       }
       h3 {
         display: inline-block;
@@ -48,10 +56,10 @@
         background-color: gray;
       }
       input[type="submit"] {
-        padding: 10px 20px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        border: 1px solid gray;
+        background-color: rgb(230, 150, 80);
+        border-color: rgb(230, 150, 80);
+        width: 80px;
+        height: 40px;
       }
     </style>
     <script>
@@ -76,7 +84,7 @@
     <div id="includeHead"></div>
     <!-- end of 헤더 import -->
 
-    <section>
+    <section class="section">
       <div id="header">
         <h2>게시물 수정</h2>
       </div>
@@ -90,12 +98,18 @@
           <textarea id="contents" name="contents" required></textarea><br />
         </div>
         <form id="button_div" action="freeboard.html">
-          <input type="submit" id="alter" value="수정" />
-          <input type="submit" id="delete" value="삭제" />
+          <input type="submit" id="alter" value="수정" class="inputbtn" />
+          <input type="submit" id="delete" value="삭제" class="inputbtn" />
         </form>
       </div>
     </section>
 
-    <footer></footer>
+    <footer>
+      <div class="angleup">
+        <a href="#" title=”맨위로">
+          <img src="images/angleup.png" alt="맨위로">
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
