@@ -14,6 +14,7 @@ ul.boardList li.boardHead {
     justify-content: space-around;
     text-align: center;
 }
+
 /* border-bottom: 1px solid #ccc */
 
 ul.boardList li:first-child {

@@ -15,7 +15,7 @@ a {
 }
 
 .logofont {
-  font-family: "Architects Daughter", cursive;
+  font-family: "Architects Daughter", cursive !important;
   color: rgb(230, 150, 80);
   font-size: 40px;
   margin-left: 10px;

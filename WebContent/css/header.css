@@ -1,3 +1,24 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Anton&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Roboto+Condensed:wght@300&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap);
+
+span,
+a,
+td,
+div.label {
+  font-family: "Noto Sans Kr", sans-serif;
+
+}
+
+.logo_font {
+  font-size: 30px;
+  font-family: 'Architects Daughter', cursive;
+  color: rgb(230, 150, 80);
+}
+
 * {
   margin: 0;
   padding: 0;
