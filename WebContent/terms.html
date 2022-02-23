@@ -5,40 +5,22 @@
     <title>회원가입 약관동의</title>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="css/terms.css" />
+    <link rel="stylesheet" href="css/angleup.css" />
+    
+    <!-- JAVASCRIPT -->
+    <script src="js/chatbot.js"></script>
+    
+    <!-- JQUERY -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
-      href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+    rel="stylesheet"
     />
-    <script src="</script'>http://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="</script'>http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css" />
-
-    <style type="text/css">
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        transform: translateY(20%);
-      }
-
-      .inputbtn {
-        background-color: rgb(230, 150, 80);
-        border-color: rgb(230, 150, 80);
-        width: 80px;
-        height: 40px;
-      }
-
-      #d1 {
-        width: 770px;
-        margin: 0 auto;
-      }
-    </style>
 
     <!-- accordion 접히는 Script 선언 -->
     <script>
@@ -53,6 +35,20 @@
 
   <body>
     <section class="section">
+      <div class="logo">
+        <ul>
+          <li>
+            <a href="./main.html">
+              <img src="images/multicampus_logo.png" class="logoimg">
+            </a>
+          </li>
+          <li>
+            <a href="./main.html">
+              <h1 class="logofont">.COMMUNITY</h1>
+            </a>
+          </li>
+        </ul>
+      </div>
       <form action="./register.html" method="get" id="form1">
         <div id="d1">
           <h1 align="center">회원가입을 환영합니다.</h1>
@@ -95,10 +91,10 @@
    </textarea
               >
               <h3>
-                <a href="#"
-                  ><font size="2">개인정보 수집 및 이용에 대한 안내(필수)</font
-                  ><input type="checkbox" name="c2" id="c2"
-                /></a>
+                <a href="#">
+                  <font size="2">개인정보 수집 및 이용에 대한 안내(필수)</font>
+                  <input type="checkbox" name="c2" id="c2" />
+                </a>
               </h3>
               <div>
                 <textarea readonly="readonly" rows="5" cols="66">
@@ -114,10 +110,10 @@
                 >
               </div>
               <h3>
-                <a href="#"
-                  ><font size="2">위치정보 이용약관 동의(선택)</font
-                  ><input type="checkbox" name="c3" id="c3"
-                /></a>
+                <a href="#">
+                  <font size="2">위치정보 이용약관 동의(선택)</font>
+                  <input type="checkbox" name="c3" id="c3" />
+                </a>
               </h3>
               <div>
                 <textarea readonly="readonly" rows="5" cols="66">
@@ -224,5 +220,12 @@
         };
       </script>
     </section>
+    <footer>
+      <div class="angleup">
+        <a href="#" title=”맨위로">
+          <img src="images/angleup.png" alt="맨위로">
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

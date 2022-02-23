@@ -13,8 +13,7 @@ function kakaoLogin() {
           console.log(kakao_account);
         },
       });
-      window.location.href =
-        "http://127.0.0.1:5500/src/main/webapp/header_login.html"; //리다이렉트 되는 코드
+      window.location.href = "./header_login.html"; //리다이렉트 되는 코드
     },
     fail: function (error) {
       console.log(error);

@@ -1,0 +1,44 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  text-align: center;
+  transform: translateY(10%);
+}
+
+.logo ul,
+.logo li {
+  list-style: none;
+  display: inline-block;
+}
+
+.logofont {
+  font-family: "Architects Daughter", cursive;
+  color: rgb(230, 150, 80);
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+.logo {
+  display: inline-block;
+  justify-content: center;
+}
+
+.logo img {
+  width: 300px;
+  transform: translateY(20%);
+}
+
+.inputbtn {
+  background-color: rgb(230, 150, 80);
+  border-color: rgb(230, 150, 80);
+  width: 80px;
+  height: 40px;
+}
+
+#d1 {
+  width: 770px;
+  margin: 0 auto;
+}

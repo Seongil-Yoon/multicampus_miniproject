@@ -1,121 +1,141 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1"
+    />
+    <title>자유 게시판</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
-  <title>자유 게시판</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/free_view.css" />
+    <link rel="stylesheet" href="css/angleup.css" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/angleup.css" />
+    <!-- Jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- 헤더 import -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#includeHead").load("./header.html"); // 원하는 파일 경로를 삽입하면 된다
+      });
+    </script>
+    <div id="includeHead"></div>
+    <!-- end of 헤더 import -->
 
-  <!-- Jquery -->
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="css/free_view.css" />
-</head>
-
-<body>
-  <!-- 헤더 import -->
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("#includeHead").load("./header.html"); // 원하는 파일 경로를 삽입하면 된다
-    });
-  </script>
-  <div id="includeHead"></div>
-  <!-- end of 헤더 import -->
-
-  <div>
-    <br />
-    <br />
-  </div>
-  <table style="
+    <div>
+      <br />
+      <br />
+    </div>
+    <table
+      style="
         text-align: center;
         border: 1px solid #dddddd;
         word-break: break-all;
         word-wrap: break-word;
-      ">
-    <thead>
-      <th colspan="6" style="background-color: #eeeeee; text-align: center; height: 3vw">
-        글
-      </th>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="width: 20%; border: 1px solid #949494">작성자</td>
-        <td colspan="2" style="border: 1px solid #949494">윤성일</td>
+      "
+    >
+      <thead>
+        <th
+          colspan="6"
+          style="background-color: #eeeeee; text-align: center; height: 3vw"
+        >
+          글
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="width: 20%; border: 1px solid #949494">작성자</td>
+          <td colspan="2" style="border: 1px solid #949494">윤성일</td>
 
-        <td style="width: 20%; border: 1px solid #949494">작성일자</td>
-        <td colspan="2" style="border: 1px solid #949494">
-          <script>
-            let today = new Date();
+          <td style="width: 20%; border: 1px solid #949494">작성일자</td>
+          <td colspan="2" style="border: 1px solid #949494">
+            <script>
+              let today = new Date();
 
-            document.write(today.toLocaleString());
-          </script>
-        </td>
-      </tr>
+              document.write(today.toLocaleString());
+            </script>
+          </td>
+        </tr>
 
-      <tr>
-        <td>글 내용</td>
-        <td colspan="4" style="
+        <tr>
+          <td>글 내용</td>
+          <td
+            colspan="4"
+            style="
               height: 600px;
               text-align: left;
               word-break: break-all;
               word-wrap: break-word;
               vertical-align: top;
-            ">
-          <br />안녕하세요
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <br />
+            "
+          >
+            <br />안녕하세요
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
 
-  <br />
-  <div style="text-align: center">
-    <button style="
+    <br />
+    <div style="text-align: center">
+      <button
+        style="
         display: inline-block;
         background-color: rgb(230, 150, 80);
         border-color: rgb(230, 150, 80);
         width: 80px;
         height: 40px;
-        ;" onclick="location.href='freeboard.html' ">
-      목록
-    </button>
-    <button id="btn1" style="
+        ;"
+        onclick="location.href='freeboard.html' "
+      >
+        목록
+      </button>
+      <button
+        id="btn1"
+        style="
         display: inline-block;
         background-color: rgb(230, 150, 80);
         border-color: rgb(230, 150, 80);
         width: 80px;
-        height: 40px;" onclick="location.href='freeboard_alter.html'">
-      글 수정
-    </button>
-    <button id="btn2" style="
+        height: 40px;"
+        onclick="location.href='freeboard_alter.html'"
+      >
+        글 수정
+      </button>
+      <button
+        id="btn2"
+        style="
         display: inline-block;
         background-color: rgb(230, 150, 80);
         border-color: rgb(230, 150, 80);
         width: 80px;
-        height: 40px;" onclick="location.href='freeboard.html'">
-      글 삭제
-    </button>
-  </div>
-  <script>
-    document.getElementById("btn2").addEventListener("click", 삭제);
-
-    function 삭제() {
-      alert("삭제되었습니다.");
-    }
-  </script>
-  <div>
-    <br />
-    <br />
-  </div>
-  <footer>
-    <div class="angleup">
-      <a href="#" title=”맨위로">
-        <img src="images/angleup.png" alt="맨위로">
-      </a>
+        height: 40px;"
+        onclick="location.href='freeboard.html'"
+      >
+        글 삭제
+      </button>
     </div>
-  </footer>
-</body>
+    <script>
+      document.getElementById("btn2").addEventListener("click", 삭제);
 
+      function 삭제() {
+        alert("삭제되었습니다.");
+      }
+    </script>
+    <div>
+      <br />
+      <br />
+    </div>
+	<footer>
+		<div class="angleup">
+			<a href="#" title=”맨위로">
+			  <img src="images/angleup.png" alt="맨위로">
+			</a>
+		  </div>
+	</footer>
+  </body>
 </html>
