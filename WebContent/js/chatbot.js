@@ -13,6 +13,7 @@
     ch.q.push(args);
   };
   w.ChannelIO = ch;
+
   function l() {
     if (w.ChannelIOInitialized) {
       return;
@@ -35,6 +36,7 @@
     window.addEventListener("load", l, false);
   }
 })();
+
 ChannelIO("boot", {
   pluginKey: "14f03729-2369-4929-8b70-44d00ce5de31",
 });
